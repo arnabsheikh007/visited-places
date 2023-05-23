@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "predeploy": "cd ../ && npm install && npm run build"
   },
-  "author": "",
+  "author": "Arnab Sheikh",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
